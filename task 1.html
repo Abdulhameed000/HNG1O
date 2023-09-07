@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HNG10 TASK 1 SUBMISSION</title>
+    <style>
+       /* Adding my CSS styles here */
+        body {
+            
+            font-family: Arials, sans-serif;
+            text-align: center;
+        }
+        body>h1{
+            font-size:30px;
+        }
+
+        img {
+            max-width: 150px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1 data-testid="slackUserName">Abdulhameed Adeola - Bello</h1>
+    <img src="slack pic.jpg" alt="Abdulhameed Adeola - Bello" data-testid="slackDisplayImage">
+    <p data-testid="currentDayOfTheWeek"></p>
+    <p data-testid="currentUTCTime"></p>
+    <p data-testid="myTrack">Front-End Development</p>
+    <a href="https://github.com/yourusername/your-repository" data-testid="githubURL">GitHub Repository</a>
+
+    <script>
+        // Adding my JavaScript code here to update dynamic data
+        const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        const currentDayIndex = new Date().getDay();
+        const currentDay = daysOfWeek[currentDayIndex];
+        document.querySelector("[data-testid='currentDayOfTheWeek']").textContent = `Current Day: ${currentDay}`;
+
+        function updateUTCTime() {
+            const currentUTCTime = new Date().toUTCString();
+            document.querySelector("[data-testid='currentUTCTime']").textContent = `Current UTC Time: ${currentUTCTime}`;
+        }
+
+        // Update UTC time every second
+        setInterval(updateUTCTime, 1000);
+    </script>
+</body>
+</html>
