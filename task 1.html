@@ -37,7 +37,7 @@
         document.querySelector("[data-testid='currentDayOfTheWeek']").textContent = `Current Day: ${currentDay}`;
 
         function updateUTCTime() {
-            const currentUTCTime = new Date().toUTCString();
+            const currentUTCTime = Date.now();
             document.querySelector("[data-testid='currentUTCTime']").textContent = `Current UTC Time: ${currentUTCTime}`;
         }
 
