@@ -36,9 +36,9 @@
         const currentDay = daysOfWeek[currentDayIndex];
         document.querySelector("[data-testid='currentDayOfTheWeek']").textContent = `Current Day: ${currentDay}`;
 
-        function getCurrentUTCTime() {
+        function updateUTCTime() {
            const currentUTCTime = Date.now();
-            document.querySelector("[data-testid='currentUTCTime']").textContent = getCurrentUTCTime();
+            document.querySelector("[data-testid='currentUTCTime']").textContent = `Current UTC Time: ${curreentUTCTime}`;
         }
 
         // Update UTC time every second
